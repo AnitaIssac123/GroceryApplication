@@ -1,0 +1,27 @@
+<suite name="Grouping">
+<parameter name="browser" value="Chrome"></parameter>
+
+	<test threadcount="3" name="myTest">
+		<groups>
+		<run>
+		<include name="smoke"></include>
+		</run>
+		</groups>
+		<classes>
+	<class name="testcases.ManageCategoryTest"></class>
+
+<methods>
+	<include name="managecategory"></include>
+</methods>
+
+<!--  <class name="testcases.ManageFooterTextTest"></class> 
+ <class name="testcases.ManageNewsTest"></class>
+ <methods> 
+ <include name="searchNews">
+ 
+ </include></methods> -->
+
+		</classes>
+		
+	</test>
+</suite>

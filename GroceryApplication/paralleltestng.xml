@@ -1,0 +1,34 @@
+<suite name="Parallel Testing" parallel="test" thread-count="2">
+	<parameter name="browser" value="Chrome"></parameter>
+
+	<test threadcount="3" name="myTest1">
+		<classes>
+
+			<class name="testcases.ManageNewsTest"></class>
+			<methods>
+
+				<include name="resetNews">
+
+				</include>
+			</methods>
+
+		</classes>
+
+	</test>
+	<test threadcount="3" name="myTest2">
+
+
+		<classes>
+
+			<class name="testcases.ManageNewsTest"></class>
+			<methods>
+
+				<include name="resetNews">
+
+				</include>
+			</methods>
+
+		</classes>
+
+	</test>
+</suite>

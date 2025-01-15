@@ -1,0 +1,37 @@
+<suite name="Mytestsuite">
+	<parameter name="browser" value="Chrome"></parameter>
+	<listeners>
+		<listener class-name="listeners.Listeners">  </listener>
+			<listener class-name="listeners.RetryListener"></listener>
+		</listeners>
+	<test threadcount="3" name="myTest">
+		
+		<classes>
+			<!-- <class name="testcases.ManageContactTest"></class>-->
+			
+			
+<!-- <class name="testcases.ManageCategoryTest"></class>-->
+
+
+
+<!--  <class name="testcases.ManageFooterTest"></class>
+  
+  <class name="testcases.ManageGiftCardsandVouchersTest"></class>
+   <class name="testcases.SubcategorytTest"></class>
+   
+   
+<class name="testcases.CategoryTest"></class>-->
+
+<class name="testcases.CategoryTest"></class>
+<class name="testcases.ManageCategoryTest"></class>
+<class name="testcases.ManageContactTest"></class>
+<class name="testcases.ManageFooterTest"></class>
+<class name="testcases.ManageGiftCardsandVouchersTest"></class>
+<class name="testcases.ManageNewsTest"></class>
+<class name="testcases.SubcategorytTest"></class>
+
+
+		</classes>
+		
+	</test>
+</suite>
