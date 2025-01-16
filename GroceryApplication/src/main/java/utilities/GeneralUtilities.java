@@ -39,7 +39,7 @@ public class GeneralUtilities {
 		selectedElement.click();
 
 	}
-	public void hoverOverElement(WebElement element) {
+	public void hoverOverElement(WebDriver driver,WebElement element) {
         Actions actions = new Actions(driver);
         actions.moveToElement(element).perform();
     }

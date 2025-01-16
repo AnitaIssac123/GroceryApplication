@@ -18,7 +18,7 @@ public class ManageCategoryTest extends BaseClass {
 	
 	
   @Test(retryAnalyzer=retry.Retry.class)
-  public void managecategory() throws IOException {
+  public void verifyAddnewManagecategoryDetails() throws IOException {
 	  
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();
@@ -26,7 +26,7 @@ public class ManageCategoryTest extends BaseClass {
 			  .choosefile().selectTopmenuradiobutton().selectLeftmenuButton().clickonSaveButton();
 		boolean expectedresult=true;
 		boolean actualresult=mcp.getAlertMessage();
-		Assert.assertEquals(actualresult, expectedresult,Constants.MCP_managecategory);
+		Assert.assertEquals(actualresult, expectedresult,Constants.MCP_verifyAddnewManagecategoryDetails);
 	
   }
   

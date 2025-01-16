@@ -13,14 +13,14 @@ public class ManageGiftCardsandVouchersTest extends BaseClass {
 	HomePage hp;
 	ManageGiftCardsandVouchersPage mgv;
   @Test
-  public void managegiftVouchers() throws IOException {
+  public void VerifyOnAddingManagegiftCardsandVouchersAdmindetails() throws IOException {
 	  
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();
 	  mgv=hp.clickonmanagegiftVoucher().clickonAdminUsersinfofield().clickonNewButton().enterusernamefield().enterpasswordfield().selectusertypefield().clickonSavebutton();
 	  boolean expectedresult=true;
 	  boolean actualresult=mgv.getAlertmessage();
-	  Assert.assertEquals(actualresult, expectedresult,Constants.MGV_managegiftVouchers);
+	  Assert.assertEquals(actualresult, expectedresult,Constants.MGV_VerifyOnAddingManagegiftCardsandVouchersAdmindetails);
 	 
   }
 }

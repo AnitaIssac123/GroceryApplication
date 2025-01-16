@@ -28,7 +28,8 @@ public class ManageCategoryPage {
 	@FindBy(xpath="//input[@id='main_img']")WebElement choosefile;
 	@FindBy(xpath="//input[@checked='checked' and@name='top_menu']") WebElement topmenuradiobutton;
 	@FindBy(xpath="//input[@name='show_home' and@value='no']") WebElement leftmenubutton;
-	@FindBy(xpath="//button[text()='Save']")WebElement savebutton;
+	@FindBy(xpath="//button[@type='submit']") WebElement savebutton;
+	//@FindBy(xpath="//button[text()='Save']")WebElement savebutton;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement getalertmessage;
 	
 	
@@ -64,9 +65,11 @@ public class ManageCategoryPage {
 	public ManageCategoryPage selectTopmenuradiobutton()
 	{
 		
-		gu.scrollToElement(driver, topmenuradiobutton);
 		
-		gu.clickOnElement(topmenuradiobutton);
+		gu.scrollToElement(driver, topmenuradiobutton);
+		gu.hoverOverElement(driver,topmenuradiobutton);
+		
+		//gu.selectRadioButton(topmenuradiobutton);
 		
 		return this;
 		
@@ -74,13 +77,20 @@ public class ManageCategoryPage {
 	
 	public ManageCategoryPage selectLeftmenuButton()
 	{
-		leftmenubutton.click();
+		//gu.selectRadioButton(leftmenubutton);
+		gu.scrollToElement(driver, leftmenubutton);
+		gu.hoverOverElement(driver,leftmenubutton);
 		return this;
 	}
 	public ManageCategoryPage clickonSaveButton()
 	{
-		gu.scrollToElement(driver, savebutton);
+		
+		wu.waitUntilClickable(driver, savebutton);
+		
+		//gu.scrollToElement(driver, savebutton);
+		
 		savebutton.click();
+		
 		return this;
 		
 	}
