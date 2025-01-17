@@ -45,7 +45,7 @@ public class LoginPageTest extends BaseClass {
   
 	  public Object[][] dpmethod() 
 	  {
-		  return new Object[][] {{"admin1","admin"},{"admin2","admin"},{"admin3","admin"}};
+		  return new Object[][] {{"admin567","admin"},{"admin256","admin"},{"admin356","admin"}};
 	  }
   
   @Test

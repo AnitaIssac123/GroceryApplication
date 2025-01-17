@@ -8,14 +8,13 @@
   </listeners>
   <test thread-count="5" name="myTest(failed)">
     <classes>
-      <class name="testcases.LoginPageTest">
+      <class name="testcases.SubcategorytTest">
         <methods>
-          <include name="loginWithInvalidUsernameAndValidPassword" invocation-numbers="0 1"/>
+          <include name="verifySubCategoryitemsearching"/>
           <include name="driverQuit"/>
-          <include name="loginWithValidUsernameAndInvalidPassword" invocation-numbers="2"/>
           <include name="initializebrowser"/>
         </methods>
-      </class> <!-- testcases.LoginPageTest -->
+      </class> <!-- testcases.SubcategorytTest -->
     </classes>
   </test> <!-- myTest(failed) -->
 </suite> <!-- Failed suite [Mytestsuite] -->

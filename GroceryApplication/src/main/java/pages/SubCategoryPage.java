@@ -86,7 +86,7 @@ public boolean getAlertMessage()
 
 public SubCategoryPage clickOnSearchButton()
 {
-
+	searchbutton.click();;
 	return this;
 }
 
