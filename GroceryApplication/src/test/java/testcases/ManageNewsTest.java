@@ -15,7 +15,7 @@ public class ManageNewsTest extends BaseClass{
 	ManageNewsPage mnp;
 	
   @Test(priority=1)
-  public void verifyonaddingNewManagenewsdetails () throws IOException {
+  public void verifyUserIsAbleToAddNewNewsWithValidDetails () throws IOException {
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();
 	  mnp=hp.clickonManageNews().clickonNewsButton().enterthenewsfield().clickonSaveButton();
@@ -23,7 +23,7 @@ public class ManageNewsTest extends BaseClass{
 		
   }
   @Test(priority=2)
-  public void VerifyonsearchingNonexistingnews() throws IOException
+  public void verifyUserIsableTosearchTheNonexistingnews() throws IOException
   {
 	  
 	  lp = new LoginPage(driver);
@@ -31,12 +31,12 @@ public class ManageNewsTest extends BaseClass{
 	  mnp=hp.clickonManageNews().clickonSearchButton().enterTitle().clickonSearchNewButton();
 	  boolean expectedresult=true;
 	  boolean actualresult=mnp.checkonResultnotfoundmessage();
-	  Assert.assertEquals(actualresult, expectedresult,Constants.MNP_VerifyonsearchingNonexistingnews);
+	  Assert.assertEquals(actualresult, expectedresult,Constants.MNP_verifyUserIsableTosearchTheNonexistingnews);
 	  
 		
   }
   @Test(priority=3)
-  public void verifyonUpdatingNews() throws IOException
+  public void verifyUserisAbletoUpdateNewsWithValidDetails() throws IOException
   {
 	  
 	  lp = new LoginPage(driver);

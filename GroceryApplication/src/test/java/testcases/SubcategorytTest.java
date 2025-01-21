@@ -15,18 +15,19 @@ public class SubcategorytTest extends BaseClass{
 	HomePage hp;
 	SubCategoryPage scp;
   @Test(priority=1)
-  public void verifyAddnewsubcategorywithvalidDetails() throws IOException {
+  public void verifyUserIsAbletoAddnewsubcategorywithvalidDetails() throws IOException {
 	  
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();
 	  scp=hp.clickOnSubCategoryButton().clickOnNewTabButton().selectCategory().subCategory().chooseFileImage().clickOnSaveButton();
 	  boolean actualresult=scp.getAlertMessage();
 	  boolean expectedresult=true;
-	  Assert.assertEquals(actualresult,expectedresult,Constants.SCP_verifyAddnewsubcategorywithvalidDetails );
+	  Assert.assertEquals(actualresult,expectedresult,Constants.SCP_verifyUserIsAbletoAddnewsubcategorywithvalidDetails );
   }
   @Test(priority=2)
   
-  public void verifySubCategoryitemsearching() throws IOException
+  
+  public void verifyUserIsAbletoSearchTheexistingSubCategoryitem() throws IOException
   {
 	  
 	  lp = new LoginPage(driver);

@@ -19,6 +19,7 @@ public class ManageFootTextPage {
 	
 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/Footertext/edit?edit=1']")WebElement editbutton;
 	@FindBy(xpath="//textarea[@name='address']") WebElement addressfield;
+
 	@FindBy(xpath="//input[@name='phone']") WebElement phonenumberfield;
 	@FindBy(xpath="//button[@name='Update']")WebElement updatebutton;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alertmessage;

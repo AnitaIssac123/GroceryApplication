@@ -13,7 +13,7 @@ public class LoginPageTest extends BaseClass {
 	LoginPage login;
 	HomePage home;
   @Test
-  public void loginWithValidCredentials() throws IOException {
+  public void verifyloginWithValidCredentials() throws IOException {
 	  
 	  
 	  login=new  LoginPage(driver);
@@ -28,7 +28,7 @@ public class LoginPageTest extends BaseClass {
   
   @Test(dataProvider="data provider")
   
-  public void loginWithInvalidUsernameAndValidPassword(String username,String password)
+  public void verifyLoginWithInvalidUsernameAndValidPassword(String username,String password)
   {
 	  login=new  LoginPage(driver);
 	  
@@ -37,7 +37,7 @@ public class LoginPageTest extends BaseClass {
 	  boolean expectedresult=true;
 	  boolean actualresult=login.getAlert().contains("Invalid Username/Password");
 	  
-	  Assert.assertEquals(expectedresult, actualresult,"alert message is not as expected");
+	  Assert.assertEquals(expectedresult, actualresult,Constants.lp_verifyLoginWithInvalidUsernameAndValidPassword);
 	  
   }
   
@@ -50,7 +50,7 @@ public class LoginPageTest extends BaseClass {
   
   @Test
   
-  public void loginWithValidUsernameAndInvalidPassword()
+  public void verifyLoginWithValidUsernameAndInvalidPassword()
   {
 	  String username="admin";
 	  String password="admin123";
@@ -61,7 +61,7 @@ public class LoginPageTest extends BaseClass {
 	  boolean expectedresult=true;
 	  boolean actualresult=login.getAlert().contains("Invalid Username/Password");
 	  
-	  Assert.assertEquals(expectedresult, actualresult,"alert message is not as expected");
+	  Assert.assertEquals(expectedresult, actualresult,Constants.lp_verifyLoginWithValidUsernameAndInvalidPassword);
   
   }
  
@@ -70,7 +70,7 @@ public class LoginPageTest extends BaseClass {
 @Test
 
 
-public void loginWithInValidUsernameAndInvalidPassword()
+public void verifyLoginWithInValidUsernameAndInvalidPassword()
 {
 	
 	String username="admin567";
@@ -83,7 +83,7 @@ login=new  LoginPage(driver);
 	  boolean expectedresult=true;;
 	  boolean actualresult=login.getAlert().contains("Invalid Username/Password");
 	  
-	  Assert.assertEquals(expectedresult, actualresult,"alert message is not as expected");
+	  Assert.assertEquals(expectedresult, actualresult,Constants.lp_verifyLoginWithInValidUsernameAndInvalidPassword);
 
 }
 

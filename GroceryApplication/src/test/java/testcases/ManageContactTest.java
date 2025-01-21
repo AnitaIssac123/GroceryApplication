@@ -13,7 +13,7 @@ public class ManageContactTest extends BaseClass {
 	HomePage hp;
 	ManageContactPage mcpp;
   @Test
-  public void VerifyupdateManageContactPageDetails() throws IOException {
+  public void verifyUserIsableToUpdateTheContactWithValidDetails() throws IOException {
 	  
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();
@@ -22,7 +22,7 @@ public class ManageContactTest extends BaseClass {
 
 	boolean expectedresult=true;
 	boolean actalresult=mcpp.getalertmessage();
-	Assert.assertEquals(actalresult,expectedresult,Constants.MCPP_VerifyupdateManageContactPageDetails);
+	Assert.assertEquals(actalresult,expectedresult,Constants.MCPP_verifyUserIsableToUpdateTheContactWithValidDetails);
 	  
   }
 }

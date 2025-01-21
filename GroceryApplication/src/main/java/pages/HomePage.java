@@ -19,7 +19,7 @@ public class HomePage {
 	 }
 	 @FindBy(xpath="//span[text()='7rmart supermarket']") WebElement homePageText;
 	 @FindBy(xpath="//p[text()='Sub Category']") WebElement subCategoryButton;
-	 @FindBy(xpath="//p[text()='Manage Category']")WebElement managecategorybutton;
+	// @FindBy(xpath="//p[text()='Manage Category']")WebElement managecategorybutton;
 	 @FindBy(xpath="//p[text()='Manage Contact']") WebElement managecontactbutton;
 	 @FindBy(xpath="//p[text()='Manage Footer Text']")WebElement managefootertextbutton;
 	 @FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/' and@class='active nav-link']")WebElement managecardandvoucherbutton;
@@ -36,12 +36,12 @@ public class HomePage {
 		 subCategoryButton.click();
 		 return new SubCategoryPage(driver);
 	 }
-	 public ManageCategoryPage clickonManageCategoryButton()
-		{
-		 managecategorybutton.click();
+	// public ManageCategoryPage clickonManageCategoryButton()
+	//	{
+	//	 managecategorybutton.click();
 		   // gu.clickOnElement(managecategorybutton);
-			return new  ManageCategoryPage(driver);
-		}
+		//	return new  ManageCategoryPage(driver);
+		//}
 	 public ManageContactPage clickOnManageContactButton() {
 			
 			managecontactbutton.click();

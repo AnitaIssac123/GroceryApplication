@@ -15,14 +15,14 @@ public class ManageFooterTest extends BaseClass {
 	HomePage hp;
 	ManageFootTextPage mfp;
   @Test
-  public void verifyManagefootertextUpdatedetails() throws IOException {
+  public void verifyUserIsAbleToUpdateThefootertextWithValidDetails() throws IOException {
 	  
 	  lp = new LoginPage(driver);
 	  hp=lp.loginByUsingExcelData();
 	  mfp=hp.clickonManagefootertext().clickoneditbutton().enterAddressField().enterPhonenumberField().clickonUpdateButton();
 	 boolean expectedresult=true;
 	boolean  actualresult=mfp.getalertMessage();
-	  Assert.assertEquals(actualresult,expectedresult,Constants.MFP_verifyManagefootertextUpdatedetails);
+	  Assert.assertEquals(actualresult,expectedresult,Constants.MFP_verifyUserIsAbleToUpdateThefootertextWithValidDetails);
 	 
   }
   

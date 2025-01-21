@@ -15,7 +15,7 @@ public class CategoryTest extends BaseClass {
 	CategoryPage ccp;
 	
   @Test
-  public void verifyCategoryButton() throws IOException {
+  public void verifyUserIsAbleToSearchNonExistingCategory() throws IOException {
 	 
 	  
 	 lp = new LoginPage(driver);
@@ -23,8 +23,21 @@ public class CategoryTest extends BaseClass {
 	  ccp=hp.clickonCategoryButton().clickonSearchbutton().entercategoryName().clickonSearchButton2();
 	  boolean expectedresult=true;
 	  boolean actualresult=ccp.checkonresultmessage();
-	  Assert.assertEquals(actualresult,expectedresult,Constants.CCP_verifyCategoryButton);
+	  Assert.assertEquals(actualresult,expectedresult,Constants.CCP_verifyUserIsAbleToSearchNonExistingCategory);
 	  
   }
+  @Test(retryAnalyzer=retry.Retry.class)
+  public void verifyUserIsAbleToAddNewCategoryWithValidDetails() throws IOException {
+	  
+	  lp = new LoginPage(driver);
+	  hp=lp.loginByUsingExcelData();
+	  ccp=hp.clickonCategoryButton().clickonNewButton().categoryfield().selectGroups()
+			  .choosefile().selectTopmenuradiobutton().selectLeftmenuButton().clickonSaveButton();
+		boolean expectedresult=true;
+		boolean actualresult=ccp.getAlertMessage();
+		Assert.assertEquals(actualresult, expectedresult,Constants.CCP_verifyUserIsAbleToAddNewCategoryWithValidDetails);
+	
+  }
+  
   }
  
